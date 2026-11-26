@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-11-26T01:52:18.172Z",
+  "base": "http://127.0.0.1:4180",
+  "shots": [
+    {
+      "name": "01-list-data.png",
+      "note": "有数据的会话列表（6 条会话，表格七列）"
+    },
+    {
+      "name": "02-list-empty.png",
+      "note": "空结果状态：没有符合条件的会话，筛选区保留"
+    },
+    {
+      "name": "03-detail-raw.png",
+      "note": "详情回放原文视图：引用上标已展开来源标题，含拦截事件与反馈"
+    },
+    {
+      "name": "04-detail-masked.png",
+      "note": "详情回放脱敏视图：手机号 138****1234、邮箱 s***@example.com，顶部显示共脱敏 N 处"
+    },
+    {
+      "name": "05-export-running.png",
+      "note": "导出中：进度条 + 已生成 N / 共 M 条，每 3 秒轮询"
+    },
+    {
+      "name": "06-export-failed.png",
+      "note": "导出失败：失败提示与「重试」按钮"
+    },
+    {
+      "name": "07-range-exceeded.png",
+      "note": "91 天跨度：查询按钮禁用 + 红字提示「审计查询时间跨度不能超过 90 天，请缩小范围」"
+    },
+    {
+      "name": "08-forbidden.png",
+      "note": "非审计角色访问审计路由被重定向到 403 无权限页"
+    }
+  ]
+}

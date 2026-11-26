@@ -1,0 +1,59 @@
+# npm test (vitest run)  (fresh clone: delivery/work/1892/clean)
+$ npm test
+
+> clawhunt-1892-assistant-audit-page@1.0.0 test
+> vitest run
+
+
+ RUN  v2.1.9 E:/AI接单/Clawhunt-4/delivery/work/1892/clean
+
+ ✓ src/utils/__tests__/redact.test.ts (6 tests) 3ms
+ ✓ src/utils/__tests__/export.test.ts (4 tests) 2ms
+ ✓ src/utils/__tests__/range.test.ts (3 tests) 4ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/message-item.test.tsx (5 tests) 288ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/range-limit.test.tsx (3 tests) 389ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/guard.test.tsx (2 tests) 573ms
+   ✓ AC1 审计角色守卫 > 审计角色可以正常渲染列表页（对照组） 451ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/redaction-toggle.test.tsx (3 tests) 708ms
+   ✓ AC3 原文 / 脱敏切换 > 默认原文视图显示完整手机号；切到脱敏后文本变化、条目数量不变 375ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/list-page.test.tsx (4 tests) 1240ms
+   ✓ 审计列表页 > 渲染表格七列与六条会话 562ms
+   ✓ 审计列表页 > 查询后把筛选条件写入 URL query 497ms
+ ✓ src/pages/workbench/audit/assistant/__tests__/export-bar.test.tsx (4 tests) 13816ms
+   ✓ AC4 导出任务 > 点击导出后显示进度条与「已生成 N / 共 M 条」 398ms
+   ✓ AC4 导出任务 > 轮询完成后给出下载按钮与 10 分钟倒计时 3099ms
+   ✓ AC4 导出任务 > 导出失败时显示失败态与「重试」按钮 6108ms
+   ✓ AC4 导出任务 > 下载链接到期后按钮置灰并提示重新导出 4206ms
+
+ Test Files  9 passed (9)
+      Tests  34 passed (34)
+   Start at  10:10:39
+   Duration  39.62s (transform 8.16s, setup 1.99s, collect 133.08s, tests 17.02s, environment 5.74s, prepare 1.09s)
+
+(node:37996) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56656) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:59372) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28516) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54480) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+stderr | src/pages/workbench/audit/assistant/__tests__/export-bar.test.tsx > AC4 导出任务 > 点击导出后显示进度条与「已生成 N / 共 M 条」
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/pages/workbench/audit/assistant/__tests__/list-page.test.tsx > 审计列表页 > 渲染表格七列与六条会话
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/pages/workbench/audit/assistant/__tests__/guard.test.tsx > AC1 审计角色守卫 > 非审计角色进入审计路由时跳转无权限页，且不发起任何审计数据请求
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+stderr | src/pages/workbench/audit/assistant/__tests__/redaction-toggle.test.tsx > AC3 原文 / 脱敏切换 > 默认原文视图显示完整手机号；切到脱敏后文本变化、条目数量不变
+⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+EXIT=0

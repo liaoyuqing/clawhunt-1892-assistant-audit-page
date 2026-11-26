@@ -1,0 +1,5 @@
+# npx tsc --noEmit  (fresh clone: delivery/work/1892/clean)
+$ npx tsc --noEmit
+
+
+EXIT=0

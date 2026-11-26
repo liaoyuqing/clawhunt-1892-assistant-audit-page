@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.vite/
+coverage/
+clean/
+*.log
+!docs/checks/*.log
+.DS_Store
+Thumbs.db
+playwright-report/
+test-results/
+# 内部工作文档不入公开仓库（含密钥与定价信息）
+HANDOFF.md
+PROPOSAL.md
+REQUIREMENT.md
+session-id.txt
+scripts/_probe.mjs
+scripts/run-checks.ps1
+scripts/run-checks.mjs
+scripts/create-repo.mjs
