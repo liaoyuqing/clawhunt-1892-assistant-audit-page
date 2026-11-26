@@ -213,11 +213,17 @@ DOM 结构与条目数量完全不变（`AC3` 组件测试断言条目数量与 
 
 ## 10. 验证命令与结果
 
-四条命令均在干净环境（删除 `node_modules` 后重装）跑过，原始日志在 `docs/checks/`：
+四条命令均在**全新 clone**（`git clone` 到空目录、无 `node_modules`）里跑过，原始日志逐条留在 `docs/checks/`：
 
-| 命令 | 结果 |
-| --- | --- |
-| `npm install` | EXIT=0 |
-| `npm test` | EXIT=0，9 个文件 / 34 个用例全通过 |
-| `npx tsc --noEmit` | EXIT=0，无错误 |
-| `npx vite build` | EXIT=0，产物见 `docs/checks/build.log` |
+| 命令 | 结果 | 日志 |
+| --- | --- | --- |
+| `npm install` | EXIT=0，262 个包，65.6s | `docs/checks/npm-install.log` |
+| `npm test` | EXIT=0，**9 个测试文件 / 34 个用例全通过**，39.62s | `docs/checks/npm-test.log` |
+| `npx tsc --noEmit` | EXIT=0，无错误，3.2s | `docs/checks/tsc.log` |
+| `npx vite build` | EXIT=0，38.7s，`dist/` 共 5 个文件 1,435,300 字节 | `docs/checks/build.log` |
+
+构建产物明细：`assets/index-Dsx4o3nZ.js` 895,724 B、`assets/browser-BHT57zGi.js` 308,438 B、
+`assets/index-Bp2PIvzU.css` 221,032 B、`index.html` 440 B、`mockServiceWorker.js` 9,666 B。
+
+截图共 **8 张**（`docs/screenshots/`，清单见 `docs/screenshots/index.json`），全部由
+`scripts/screenshots.mjs` 用 Playwright 打开 `dist/` 真实构建产物截取，无手绘、无 HTML 仿造。
